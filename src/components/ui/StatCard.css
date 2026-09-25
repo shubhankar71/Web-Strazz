@@ -1,0 +1,67 @@
+.ws-stat-card {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-4) var(--ws-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-2);
+  transition: border-color var(--ws-transition-fast);
+}
+
+.ws-stat-card:hover {
+  border-color: var(--ws-border-strong);
+}
+
+.ws-stat-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ws-stat-card__title {
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ws-text-secondary);
+}
+
+.ws-stat-card__icon-wrapper {
+  color: var(--ws-text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ws-stat-card__value {
+  font-size: var(--ws-fs-2xl);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+  font-family: var(--ws-font-mono);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: var(--ws-space-1);
+}
+
+.ws-stat-card__subtitle {
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-tertiary);
+}
+
+/* Variant Accents */
+.ws-stat-card--danger {
+  border-left: 3px solid var(--ws-danger);
+}
+
+.ws-stat-card--danger .ws-stat-card__value {
+  color: var(--ws-danger);
+}
+
+.ws-stat-card--warning {
+  border-left: 3px solid var(--ws-warning);
+}
+
+.ws-stat-card--success {
+  border-left: 3px solid var(--ws-success);
+}

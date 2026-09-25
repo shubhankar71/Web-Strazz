@@ -1,0 +1,83 @@
+/*
+  Web Starzz design tokens.
+  A restrained, technical palette for an internal engineering tool.
+  Light surfaces, dark ink text, one accent used sparingly for
+  interactive state (active nav, links, primary actions, focus).
+*/
+
+:root {
+  /* Surfaces */
+  --ws-bg: #f6f7f9;
+  --ws-surface: #ffffff;
+  --ws-surface-raised: #ffffff;
+  --ws-surface-sunken: #f0f1f4;
+
+  /* Borders */
+  --ws-border: #e2e4ea;
+  --ws-border-strong: #cdd1da;
+
+  /* Text */
+  --ws-text-primary: #171a21;
+  --ws-text-secondary: #565d6b;
+  --ws-text-tertiary: #686f7a;
+  --ws-text-on-accent: #ffffff;
+
+  /* Accent (single restrained accent, used deliberately) */
+  --ws-accent: #3452c9;
+  --ws-accent-hover: #2c46ac;
+  --ws-accent-wash: #eef1fc;
+  --ws-accent-border: #c6d0f5;
+
+  /* Semantic */
+  --ws-success: #177245;
+  --ws-success-wash: #e9f6ef;
+  --ws-warning: #946000;
+  --ws-warning-wash: #fcf1e0;
+  --ws-danger: #c1352b;
+  --ws-danger-wash: #fbeae8;
+  --ws-info: #2f6fb0;
+  --ws-info-wash: #eaf2fa;
+
+  /* Typography */
+  --ws-font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ws-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --ws-fs-xs: 0.75rem;
+  --ws-fs-sm: 0.8125rem;
+  --ws-fs-base: 0.875rem;
+  --ws-fs-md: 0.9375rem;
+  --ws-fs-lg: 1.0625rem;
+  --ws-fs-xl: 1.3125rem;
+  --ws-fs-2xl: 1.625rem;
+
+  --ws-lh-tight: 1.25;
+  --ws-lh-base: 1.5;
+
+  /* Spacing scale (4px base) */
+  --ws-space-1: 4px;
+  --ws-space-2: 8px;
+  --ws-space-3: 12px;
+  --ws-space-4: 16px;
+  --ws-space-5: 20px;
+  --ws-space-6: 24px;
+  --ws-space-8: 32px;
+  --ws-space-10: 40px;
+  --ws-space-12: 48px;
+
+  /* Radius: modest, not pill-shaped */
+  --ws-radius-sm: 4px;
+  --ws-radius-md: 6px;
+  --ws-radius-lg: 8px;
+
+  /* Shadows: used sparingly (menus, popovers), never under every card */
+  --ws-shadow-sm: 0 1px 2px rgba(23, 26, 33, 0.06);
+  --ws-shadow-md: 0 4px 12px rgba(23, 26, 33, 0.10), 0 1px 2px rgba(23, 26, 33, 0.06);
+
+  /* Layout */
+  --ws-sidebar-width: 232px;
+  --ws-sidebar-width-collapsed: 64px;
+  --ws-header-height: 56px;
+
+  --ws-transition-fast: 120ms ease;
+  --ws-transition-base: 180ms ease;
+}

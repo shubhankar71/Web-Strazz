@@ -1,0 +1,112 @@
+.ws-session-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-3);
+  margin-bottom: var(--ws-space-4);
+}
+
+@media (min-width: 992px) {
+  .ws-session-filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.ws-session-filters__search {
+  position: relative;
+  flex: 1;
+  max-width: 420px;
+}
+
+.ws-session-filters__search-icon {
+  position: absolute;
+  left: var(--ws-space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ws-text-tertiary);
+  pointer-events: none;
+}
+
+.ws-session-filters__search input {
+  width: 100%;
+  height: 36px;
+  padding-left: calc(var(--ws-space-3) * 2 + 15px);
+  padding-right: var(--ws-space-3);
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  color: var(--ws-text-primary);
+  font-size: var(--ws-fs-sm);
+  transition: border-color var(--ws-transition-fast);
+}
+
+.ws-session-filters__search input:focus {
+  border-color: var(--ws-accent);
+  outline: none;
+}
+
+.ws-session-filters__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ws-space-3);
+}
+
+.ws-filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  padding: 0 var(--ws-space-2);
+  height: 36px;
+}
+
+.ws-filter-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ws-filter-select {
+  border: none;
+  background: transparent;
+  color: var(--ws-text-primary);
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  padding-right: var(--ws-space-2);
+  cursor: pointer;
+  outline: none;
+}
+
+.ws-filter-select option {
+  background: var(--ws-surface);
+  color: var(--ws-text-primary);
+}
+
+.ws-filter-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ws-space-1);
+  height: 36px;
+  padding: 0 var(--ws-space-3);
+  background: var(--ws-surface-sunken);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-text-secondary);
+  cursor: pointer;
+  transition: all var(--ws-transition-fast);
+}
+
+.ws-filter-reset-btn:hover {
+  background: var(--ws-border);
+  color: var(--ws-text-primary);
+}

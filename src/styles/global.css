@@ -1,0 +1,104 @@
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ws-bg);
+  color: var(--ws-text-primary);
+  font-family: var(--ws-font-ui);
+  font-size: var(--ws-fs-base);
+  line-height: var(--ws-lh-base);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: var(--ws-lh-tight);
+  color: var(--ws-text-primary);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--ws-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+code,
+.ws-mono {
+  font-family: var(--ws-font-mono);
+}
+
+/* Visible, consistent keyboard focus across the app */
+:focus-visible {
+  outline: 2px solid var(--ws-accent);
+  outline-offset: 2px;
+  border-radius: var(--ws-radius-sm);
+}
+
+/* Thin, quiet scrollbars that fit a dense technical UI */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ws-border-strong) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--ws-border-strong);
+  border-radius: 999px;
+  border: 3px solid var(--ws-bg);
+}
+
+.ws-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-text-secondary);
+  margin-bottom: var(--ws-space-4);
+}
+
+.ws-back-link:hover {
+  color: var(--ws-text-primary);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

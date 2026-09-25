@@ -1,0 +1,119 @@
+.ws-sidebar {
+  width: var(--ws-sidebar-width);
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--ws-surface);
+  border-right: 1px solid var(--ws-border);
+  transition: width var(--ws-transition-base);
+}
+
+.ws-sidebar--collapsed {
+  width: var(--ws-sidebar-width-collapsed);
+}
+
+.ws-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+  height: var(--ws-header-height);
+  padding: 0 var(--ws-space-4);
+  border-bottom: 1px solid var(--ws-border);
+  flex-shrink: 0;
+}
+
+.ws-sidebar__brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--ws-radius-sm);
+  background: var(--ws-text-primary);
+  color: var(--ws-surface);
+  flex-shrink: 0;
+}
+
+.ws-sidebar__brand-name {
+  font-size: var(--ws-fs-md);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.ws-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--ws-space-3) 0;
+}
+
+.ws-sidebar__spacer {
+  flex: 1;
+}
+
+.ws-sidebar__divider {
+  height: 1px;
+  background: var(--ws-border);
+  margin: 0 var(--ws-space-4) var(--ws-space-3);
+}
+
+.ws-sidebar__toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+  border: none;
+  background: transparent;
+  color: var(--ws-text-tertiary);
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  height: 40px;
+  padding: 0 var(--ws-space-4);
+  border-top: 1px solid var(--ws-border);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ws-sidebar__toggle:hover {
+  color: var(--ws-text-secondary);
+  background: var(--ws-surface-sunken);
+}
+
+.ws-sidebar-scrim {
+  display: none;
+}
+
+/* Tablet and mobile: use the header control to open the off-canvas navigation. */
+@media (max-width: 1024px) {
+  .ws-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 40;
+    transform: translateX(-100%);
+    width: 260px;
+  }
+
+  .ws-sidebar--collapsed {
+    width: 260px;
+  }
+
+  .ws-sidebar--mobile-open {
+    transform: translateX(0);
+    box-shadow: var(--ws-shadow-md);
+  }
+
+  .ws-sidebar-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 17, 21, 0.35);
+    z-index: 39;
+  }
+}
+
+@media (min-width: 1025px) {
+  .ws-sidebar-scrim {
+    display: none;
+  }
+}

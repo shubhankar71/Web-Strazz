@@ -1,0 +1,190 @@
+.ws-session-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-session-meta-card {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-session-meta-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ws-space-3);
+  padding-bottom: var(--ws-space-4);
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.ws-session-meta-card__id-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+}
+
+.ws-session-meta-card__id {
+  font-family: var(--ws-font-mono);
+  font-size: var(--ws-fs-xl);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+}
+
+.ws-session-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--ws-space-4);
+}
+
+.ws-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-1);
+}
+
+.ws-meta-item__label {
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ws-meta-item__value {
+  font-size: var(--ws-fs-sm);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+}
+
+.ws-user-flow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-2);
+  padding-top: var(--ws-space-3);
+  border-top: 1px dashed var(--ws-border);
+}
+
+.ws-user-flow__title {
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-text-secondary);
+}
+
+.ws-user-flow__steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ws-space-2);
+}
+
+.ws-user-flow__step {
+  background: var(--ws-surface-sunken);
+  border: 1px solid var(--ws-border);
+  padding: 2px 8px;
+  border-radius: var(--ws-radius-sm);
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-primary);
+}
+
+.ws-user-flow__arrow {
+  color: var(--ws-text-tertiary);
+  font-size: var(--ws-fs-xs);
+}
+
+/* Investigation Signal Card */
+.ws-investigation-signal {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-left: 4px solid var(--ws-accent);
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-4) var(--ws-space-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ws-space-3);
+}
+
+.ws-investigation-signal--danger {
+  border-left-color: var(--ws-danger);
+  background: var(--ws-danger-wash);
+}
+
+.ws-investigation-signal--warning {
+  border-left-color: var(--ws-warning);
+  background: var(--ws-warning-wash);
+}
+
+.ws-investigation-signal__icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+  color: var(--ws-accent);
+}
+
+.ws-investigation-signal--danger .ws-investigation-signal__icon {
+  color: var(--ws-danger);
+}
+
+.ws-investigation-signal--warning .ws-investigation-signal__icon {
+  color: var(--ws-warning);
+}
+
+.ws-investigation-signal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ws-investigation-signal__title {
+  font-size: var(--ws-fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ws-text-secondary);
+}
+
+.ws-investigation-signal__text {
+  font-size: var(--ws-fs-sm);
+  font-weight: 500;
+  color: var(--ws-text-primary);
+  line-height: var(--ws-lh-base);
+}
+
+.ws-timeline-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-2);
+}
+
+.ws-timeline-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--ws-space-2);
+}
+
+.ws-session-detail__query-note {
+  margin: 0 0 var(--ws-space-3);
+  padding: var(--ws-space-2) var(--ws-space-3);
+  color: var(--ws-text-secondary);
+  background: var(--ws-surface-sunken);
+  border-left: 3px solid var(--ws-accent);
+  font-size: var(--ws-fs-sm);
+}
+
+.ws-timeline-section__title {
+  font-size: var(--ws-fs-md);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+}

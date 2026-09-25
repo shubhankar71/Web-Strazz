@@ -1,0 +1,20 @@
+.ws-perf-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-perf-page__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-3);
+  margin-bottom: var(--ws-space-2);
+}
+
+@media (min-width: 768px) {
+  .ws-perf-page__filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

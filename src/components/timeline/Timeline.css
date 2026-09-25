@@ -1,0 +1,6 @@
+.ws-timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: var(--ws-space-2);
+}

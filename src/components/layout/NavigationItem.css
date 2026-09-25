@@ -1,0 +1,50 @@
+.ws-nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+  height: 34px;
+  padding: 0 var(--ws-space-3);
+  margin: 0 var(--ws-space-2);
+  border-radius: var(--ws-radius-md);
+  color: var(--ws-text-secondary);
+  font-size: var(--ws-fs-sm);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background var(--ws-transition-fast), color var(--ws-transition-fast);
+}
+
+.ws-nav-item:hover {
+  background: var(--ws-surface-sunken);
+  color: var(--ws-text-primary);
+  text-decoration: none;
+}
+
+.ws-nav-item svg {
+  flex-shrink: 0;
+  color: var(--ws-text-tertiary);
+  transition: color var(--ws-transition-fast);
+}
+
+.ws-nav-item:hover svg {
+  color: var(--ws-text-secondary);
+}
+
+.ws-nav-item--active {
+  background: var(--ws-accent-wash);
+  color: var(--ws-accent);
+}
+
+.ws-nav-item--active svg {
+  color: var(--ws-accent);
+}
+
+.ws-nav-item--active:hover {
+  background: var(--ws-accent-wash);
+  color: var(--ws-accent);
+}
+
+.ws-nav-item__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

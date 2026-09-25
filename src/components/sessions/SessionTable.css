@@ -1,0 +1,132 @@
+.ws-session-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  background: var(--ws-surface);
+}
+
+.ws-session-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--ws-fs-sm);
+  text-align: left;
+}
+
+.ws-session-table th {
+  background: var(--ws-bg);
+  color: var(--ws-text-secondary);
+  font-weight: 500;
+  font-size: var(--ws-fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: var(--ws-space-3) var(--ws-space-4);
+  border-bottom: 1px solid var(--ws-border);
+  white-space: nowrap;
+}
+
+.ws-session-table td {
+  padding: var(--ws-space-3) var(--ws-space-4);
+  border-bottom: 1px solid var(--ws-border);
+  color: var(--ws-text-primary);
+  vertical-align: middle;
+}
+
+.ws-session-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ws-session-table tbody tr:hover td {
+  background: var(--ws-accent-wash);
+}
+
+.ws-session-table__id-link {
+  font-family: var(--ws-font-mono);
+  font-weight: 500;
+  color: var(--ws-accent);
+  white-space: nowrap;
+}
+
+.ws-session-table__id-link:hover {
+  text-decoration: underline;
+}
+
+.ws-session-table__time-col {
+  color: var(--ws-text-secondary);
+  white-space: nowrap;
+}
+
+.ws-session-table__subtext {
+  color: var(--ws-text-secondary);
+  white-space: nowrap;
+}
+
+.ws-text-tertiary {
+  color: var(--ws-text-tertiary);
+}
+
+.ws-error-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  background: var(--ws-danger-wash);
+  color: var(--ws-danger);
+  border-radius: var(--ws-radius-sm);
+  font-weight: 600;
+  font-family: var(--ws-font-mono);
+  font-size: var(--ws-fs-xs);
+}
+
+.ws-error-none {
+  color: var(--ws-text-tertiary);
+  font-family: var(--ws-font-mono);
+}
+
+.ws-page-path {
+  background: var(--ws-surface-sunken);
+  padding: 2px 6px;
+  border-radius: var(--ws-radius-sm);
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-secondary);
+  display: inline-block;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ws-text-right {
+  text-align: right;
+}
+
+.ws-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ws-space-1);
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-accent);
+}
+
+.ws-action-link:hover {
+  text-decoration: underline;
+}
+
+/* Empty State inside table */
+.ws-session-table-empty {
+  padding: var(--ws-space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ws-space-2);
+  color: var(--ws-text-secondary);
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  font-size: var(--ws-fs-sm);
+}
+
+.ws-session-table-empty__icon {
+  color: var(--ws-text-tertiary);
+}

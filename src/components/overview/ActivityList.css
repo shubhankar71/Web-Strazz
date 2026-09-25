@@ -1,0 +1,104 @@
+.ws-activity-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  divide-y: 1px solid var(--ws-border);
+  overflow: hidden;
+}
+
+.ws-activity-item {
+  display: flex;
+  gap: var(--ws-space-3);
+  padding: var(--ws-space-3) var(--ws-space-4);
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.ws-activity-item:last-child {
+  border-bottom: none;
+}
+
+.ws-activity-item:hover {
+  background: var(--ws-bg);
+}
+
+.ws-activity-item__icon-wrapper {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.ws-activity-icon--error {
+  color: var(--ws-danger);
+}
+
+.ws-activity-icon--warning {
+  color: var(--ws-warning);
+}
+
+.ws-activity-icon--info {
+  color: var(--ws-info);
+}
+
+.ws-activity-item__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ws-activity-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ws-activity-item__title {
+  font-size: var(--ws-fs-sm);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+}
+
+.ws-activity-item__time {
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-tertiary);
+  white-space: nowrap;
+}
+
+.ws-activity-item__message {
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-secondary);
+}
+
+.ws-activity-item__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+  margin-top: var(--ws-space-1);
+}
+
+.ws-activity-item__session-link {
+  font-family: var(--ws-font-mono);
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-accent);
+  font-weight: 500;
+}
+
+.ws-activity-item__session-link:hover {
+  text-decoration: underline;
+}
+
+.ws-activity-item__path {
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-tertiary);
+  background: var(--ws-surface-sunken);
+  padding: 1px 4px;
+  border-radius: var(--ws-radius-sm);
+}
+
+.ws-activity-empty {
+  padding: var(--ws-space-6);
+  text-align: center;
+  color: var(--ws-text-tertiary);
+  font-size: var(--ws-fs-sm);
+}

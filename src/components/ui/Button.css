@@ -1,0 +1,73 @@
+.ws-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ws-space-2);
+  border-radius: var(--ws-radius-sm);
+  border: 1px solid transparent;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--ws-transition-fast), border-color var(--ws-transition-fast),
+    color var(--ws-transition-fast);
+}
+
+.ws-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ws-btn--md {
+  height: 34px;
+  padding: 0 var(--ws-space-4);
+  font-size: var(--ws-fs-sm);
+}
+
+.ws-btn--sm {
+  height: 28px;
+  padding: 0 var(--ws-space-3);
+  font-size: var(--ws-fs-xs);
+}
+
+.ws-btn--primary {
+  background: var(--ws-accent);
+  border-color: var(--ws-accent);
+  color: var(--ws-text-on-accent);
+}
+
+.ws-btn--primary:hover:not(:disabled) {
+  background: var(--ws-accent-hover);
+  border-color: var(--ws-accent-hover);
+}
+
+.ws-btn--secondary {
+  background: var(--ws-surface);
+  border-color: var(--ws-border-strong);
+  color: var(--ws-text-primary);
+}
+
+.ws-btn--secondary:hover:not(:disabled) {
+  background: var(--ws-surface-sunken);
+}
+
+.ws-btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--ws-text-secondary);
+}
+
+.ws-btn--ghost:hover:not(:disabled) {
+  background: var(--ws-surface-sunken);
+  color: var(--ws-text-primary);
+}
+
+.ws-btn--danger {
+  background: var(--ws-surface);
+  border-color: var(--ws-border-strong);
+  color: var(--ws-danger);
+}
+
+.ws-btn--danger:hover:not(:disabled) {
+  background: var(--ws-danger-wash);
+  border-color: var(--ws-danger);
+}

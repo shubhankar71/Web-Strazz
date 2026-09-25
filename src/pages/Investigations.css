@@ -1,0 +1,202 @@
+.ws-investigations-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-inv-card {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-4) var(--ws-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-3);
+  transition: border-color var(--ws-transition-fast);
+}
+
+.ws-inv-card:hover {
+  border-color: var(--ws-border-strong);
+}
+
+.ws-inv-card--high {
+  border-left: 4px solid var(--ws-danger);
+}
+
+.ws-inv-card--medium {
+  border-left: 4px solid var(--ws-warning);
+}
+
+.ws-inv-card--low {
+  border-left: 4px solid var(--ws-info);
+}
+
+.ws-inv-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ws-space-3);
+}
+
+.ws-inv-card__title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.ws-inv-card__id {
+  font-family: var(--ws-font-mono);
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-tertiary);
+}
+
+.ws-inv-card__title {
+  font-size: var(--ws-fs-md);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+  overflow-wrap: anywhere;
+}
+
+.ws-inv-card__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+}
+
+.ws-inv-card__description {
+  font-size: var(--ws-fs-sm);
+  color: var(--ws-text-secondary);
+}
+
+.ws-inv-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ws-space-3);
+  padding-top: var(--ws-space-3);
+  border-top: 1px dashed var(--ws-border);
+  font-size: var(--ws-fs-xs);
+}
+
+.ws-inv-card__link-group {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  align-items: center;
+  gap: var(--ws-space-1);
+}
+
+.ws-inv-card__link-group .ws-session-table__id-link,
+.ws-inv-card__link-group .ws-action-link {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.ws-inv-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(23, 26, 33, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--ws-space-4);
+}
+
+.ws-inv-modal {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-lg);
+  box-shadow: var(--ws-shadow-md);
+  width: 100%;
+  max-width: 540px;
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--ws-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-inv-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ws-inv-modal__title {
+  font-size: var(--ws-fs-lg);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+}
+
+.ws-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-1);
+}
+
+.ws-form-label {
+  font-size: var(--ws-fs-xs);
+  font-weight: 600;
+  color: var(--ws-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ws-form-input,
+.ws-form-textarea,
+.ws-form-select {
+  width: 100%;
+  padding: var(--ws-space-2) var(--ws-space-3);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  font-family: inherit;
+  font-size: var(--ws-fs-sm);
+  background: var(--ws-surface);
+  color: var(--ws-text-primary);
+}
+
+.ws-form-input:focus,
+.ws-form-textarea:focus,
+.ws-form-select:focus {
+  outline: none;
+  border-color: var(--ws-accent);
+}
+
+.ws-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--ws-space-2);
+  margin-top: var(--ws-space-2);
+}
+
+.ws-inv__field-error {
+  color: var(--ws-danger);
+  font-size: var(--ws-fs-xs);
+}
+
+.ws-inv__success {
+  margin: 0;
+  color: var(--ws-success);
+  font-size: var(--ws-fs-sm);
+}
+
+@media (max-width: 640px) {
+  .ws-inv-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ws-inv-modal {
+    padding: var(--ws-space-4);
+  }
+}

@@ -1,0 +1,34 @@
+.ws-timeline-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ws-space-2);
+  margin-bottom: var(--ws-space-4);
+  padding-bottom: var(--ws-space-2);
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.ws-timeline-filter-btn {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  padding: 4px 12px;
+  font-size: var(--ws-fs-xs);
+  font-weight: 500;
+  color: var(--ws-text-secondary);
+  cursor: pointer;
+  transition: all var(--ws-transition-fast);
+}
+
+.ws-timeline-filter-btn:hover {
+  background: var(--ws-surface-sunken);
+  color: var(--ws-text-primary);
+  border-color: var(--ws-border-strong);
+}
+
+.ws-timeline-filter-btn--active {
+  background: var(--ws-accent-wash);
+  color: var(--ws-accent);
+  border-color: var(--ws-accent-border);
+  font-weight: 600;
+}

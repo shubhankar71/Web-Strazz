@@ -1,0 +1,45 @@
+.ws-errors-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-errors-page__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-3);
+  margin-bottom: var(--ws-space-2);
+}
+
+@media (min-width: 768px) {
+  .ws-errors-page__filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.ws-error-title-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 320px;
+}
+
+.ws-error-title-cell__title {
+  font-family: var(--ws-font-mono);
+  font-weight: 600;
+  color: var(--ws-danger);
+  font-size: var(--ws-fs-xs);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ws-error-title-cell__msg {
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

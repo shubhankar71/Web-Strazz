@@ -1,0 +1,32 @@
+.ws-perf-detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-perf-meta-card {
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-left: 4px solid var(--ws-warning);
+  border-radius: var(--ws-radius-lg);
+  padding: var(--ws-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ws-space-4);
+}
+
+.ws-perf-meta-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ws-space-3);
+  padding-bottom: var(--ws-space-3);
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.ws-perf-meta-card__title {
+  font-size: var(--ws-fs-lg);
+  font-weight: 600;
+  color: var(--ws-text-primary);
+}

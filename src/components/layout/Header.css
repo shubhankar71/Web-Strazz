@@ -1,0 +1,110 @@
+.ws-header {
+  height: var(--ws-header-height);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-3);
+  padding: 0 var(--ws-space-5);
+  background: var(--ws-surface);
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.ws-header__menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-sm);
+  background: var(--ws-surface);
+  color: var(--ws-text-secondary);
+  cursor: pointer;
+}
+
+.ws-header__spacer {
+  flex: 1;
+}
+
+.ws-header__workspace {
+  display: flex;
+  align-items: center;
+  gap: var(--ws-space-2);
+  font-size: var(--ws-fs-xs);
+  color: var(--ws-text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ws-header__workspace-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ws-success);
+}
+
+.ws-header__workspace--demo .ws-header__workspace-dot {
+  background: var(--ws-accent);
+}
+
+.ws-header__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--ws-radius-sm);
+  border: 1px solid var(--ws-border);
+  background: var(--ws-surface-sunken);
+  color: var(--ws-text-secondary);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ws-header__account {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ws-header__account summary {
+  list-style: none;
+}
+
+.ws-header__account summary::-webkit-details-marker {
+  display: none;
+}
+
+.ws-header__account-menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + var(--ws-space-2));
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--ws-space-3);
+  min-width: 210px;
+  padding: var(--ws-space-3);
+  background: var(--ws-surface);
+  border: 1px solid var(--ws-border);
+  border-radius: var(--ws-radius-md);
+  box-shadow: var(--ws-shadow-md);
+}
+
+.ws-header__account-email {
+  color: var(--ws-text-primary);
+  font-size: var(--ws-fs-xs);
+  overflow-wrap: anywhere;
+}
+
+.ws-header__account-error {
+  color: var(--ws-danger);
+  font-size: var(--ws-fs-xs);
+}
+
+@media (max-width: 1024px) {
+  .ws-header__menu-btn {
+    display: flex;
+  }
+}

@@ -1,0 +1,31 @@
+.ws-app-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ws-app-shell__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ws-app-shell__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--ws-space-6) var(--ws-space-8);
+}
+
+@media (max-width: 1024px) {
+  .ws-app-shell__content {
+    padding: var(--ws-space-5);
+  }
+}
+
+@media (max-width: 640px) {
+  .ws-app-shell__content {
+    padding: var(--ws-space-4);
+  }
+}
