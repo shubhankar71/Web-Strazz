@@ -4,7 +4,7 @@ import Sidebar from "../components/layout/Sidebar";
 import Header from "../components/layout/Header";
 import "./AppLayout.css";
 
-export default function AppLayout() {
+export default function AppLayout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const mobileMenuButtonRef = useRef(null);
@@ -35,7 +35,7 @@ export default function AppLayout() {
           onOpenMobileNav={() => setMobileNavOpen(true)}
         />
         <main className="ws-app-shell__content">
-          <Outlet />
+          {children || <Outlet />}
         </main>
       </div>
     </div>
