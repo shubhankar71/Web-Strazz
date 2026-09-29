@@ -15,18 +15,28 @@ import RouteDocumentTitle from "./components/RouteDocumentTitle";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
+import Landing from "./pages/Landing";
+import { useAuth } from "./context/AuthContext.jsx";
+import LoadingState from "./components/ui/LoadingState";
+
+function HomeRoute() {
+  const { user, loading } = useAuth();
+  if (loading) return <LoadingState label="Checking sign-in…" />;
+  if (!user) return <Landing />;
+  return <RequireAuth><AppLayout><Overview /></AppLayout></RequireAuth>;
+}
 
 export default function App() {
   return (
     <>
       <RouteDocumentTitle />
       <Routes>
+        <Route path="/" element={<HomeRoute />} />
         <Route path="/login" element={<Login />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
 
         <Route element={<RequireAuth><AppLayout /></RequireAuth>}>
-          <Route path="/" element={<Overview />} />
           <Route path="/sessions" element={<Sessions />} />
           <Route path="/sessions/:sessionId" element={<SessionDetail />} />
           <Route path="/errors" element={<Errors />} />
