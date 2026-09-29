@@ -255,3 +255,210 @@
   .ws-app-shell .ws-page-header__title { font-size: 17px; }
   .ws-app-shell .ws-session-meta-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
+
+/* Spacing and hierarchy refinement toward the session-investigation reference. */
+.ws-app-shell {
+  --ws-bg: #f5f7fa;
+  --ws-border: #dce3ec;
+  --ws-border-strong: #cbd5e1;
+  --ws-text-primary: #24364f;
+  --ws-text-secondary: #5e718a;
+  --ws-text-tertiary: #75869d;
+  --ws-accent: #3b73c4;
+  --ws-accent-hover: #3268b6;
+  --ws-accent-wash: #edf4ff;
+  --ws-sidebar-width: 80px;
+  --ws-sidebar-width-collapsed: 80px;
+  --ws-header-height: 68px;
+}
+
+.ws-app-shell .ws-sidebar,
+.ws-app-shell .ws-sidebar--collapsed { width: 80px; }
+.ws-app-shell .ws-sidebar__nav { gap: 5px; padding: 15px 9px; }
+.ws-app-shell .ws-nav-item {
+  height: 48px;
+  padding: 5px 2px;
+  border-radius: 5px;
+  gap: 0;
+}
+.ws-app-shell .ws-nav-item svg { display: none; }
+.ws-app-shell .ws-nav-item__abbr { font-size: 11px; font-weight: 500; letter-spacing: .01em; }
+.ws-app-shell .ws-sidebar__divider { margin: 0 3px 10px; }
+
+.ws-app-shell .ws-header { gap: 17px; padding: 0 28px; }
+.ws-app-shell .ws-header__brand { gap: 9px; font-size: 12px; letter-spacing: .055em; }
+.ws-app-shell .ws-header__brand-mark { width: 25px; height: 25px; }
+.ws-app-shell .ws-header__divider { height: 24px; }
+.ws-app-shell .ws-header__breadcrumbs { gap: 10px; font-size: 14px; }
+.ws-app-shell .ws-header__breadcrumbs > svg { display: none; }
+.ws-app-shell .ws-header__breadcrumb-current { max-width: 360px; font-size: 13px; }
+.ws-app-shell .ws-header__breadcrumb-current.ws-mono::before {
+  content: "/";
+  margin-right: 10px;
+  color: #91a0b3;
+  font-family: var(--ws-font-ui);
+}
+.ws-app-shell .ws-header__workspace { min-height: 29px; padding: 0 10px; font-size: 11px; }
+.ws-app-shell .ws-header__avatar { width: 31px; height: 31px; }
+
+.ws-app-shell__content { padding: 32px 36px; }
+.ws-app-shell__content > * { width: 100%; margin-left: auto; margin-right: auto; }
+.ws-app-shell .ws-overview-grid,
+.ws-app-shell .ws-sessions-page,
+.ws-app-shell .ws-errors-page,
+.ws-app-shell .ws-perf-page { max-width: 1200px; }
+.ws-app-shell .ws-session-detail,
+.ws-app-shell .ws-error-detail-page,
+.ws-app-shell .ws-perf-detail-page,
+.ws-app-shell .ws-investigations-page { max-width: 1120px; }
+.ws-app-shell .ws-settings-page { max-width: 1040px; }
+.ws-app-shell .ws-page-header { margin-bottom: 24px; gap: 20px; }
+.ws-app-shell .ws-page-header__title { font-size: 24px; letter-spacing: -.03em; }
+.ws-app-shell .ws-page-header__description { font-size: 13px; line-height: 1.6; }
+.ws-app-shell .ws-section-title,
+.ws-app-shell .ws-timeline-section__title,
+.ws-app-shell .ws-occurrences-section__title { font-size: 15px; }
+.ws-app-shell .ws-section-header { margin-bottom: 11px; }
+.ws-app-shell .ws-overview-grid { gap: 22px; }
+
+.ws-app-shell .ws-stat-card { min-height: 104px; padding: 14px 16px; gap: 6px; border-radius: 5px; }
+.ws-app-shell .ws-stat-card__title { font-size: 11px; letter-spacing: .045em; }
+.ws-app-shell .ws-stat-card__value { margin-top: 3px; font-size: 24px; }
+.ws-app-shell .ws-stat-card__subtitle { font-size: 11px; }
+.ws-app-shell .ws-stat-card__icon-wrapper svg { width: 16px; height: 16px; }
+
+.ws-app-shell .ws-session-table { font-size: 12px; }
+.ws-app-shell .ws-session-table th { padding: 11px 12px; background: #f7f9fc; font-size: 10px; letter-spacing: .055em; }
+.ws-app-shell .ws-session-table td { height: 46px; padding: 10px 12px; font-size: 12px; }
+.ws-app-shell .ws-session-table__subtext,
+.ws-app-shell .ws-session-table__time-col { font-size: 11px; }
+.ws-app-shell .ws-session-table-wrapper,
+.ws-app-shell .ws-session-table-empty { border-radius: 5px; }
+.ws-app-shell .ws-sessions-page__header-badge {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ws-text-secondary);
+  font-family: var(--ws-font-ui);
+  font-size: 12px;
+}
+.ws-app-shell .ws-sessions-page__header-badge::first-letter { color: var(--ws-text-tertiary); }
+
+.ws-app-shell .ws-session-filters__search input { height: 39px; font-size: 12px; border-radius: 4px; }
+.ws-app-shell .ws-filter-group { height: 39px; border-radius: 4px; }
+.ws-app-shell .ws-filter-select { font-size: 11px; }
+.ws-app-shell .ws-filter-reset-btn { height: 39px; border-radius: 4px; font-size: 11px; }
+.ws-app-shell .ws-filter-label { font-size: 11px; }
+.ws-app-shell .ws-status-badge { padding: 3px 7px; border-radius: 4px; font-size: 10px; }
+.ws-app-shell .ws-status-badge__dot { width: 5px; height: 5px; }
+
+.ws-app-shell .ws-session-detail { gap: 18px; }
+.ws-app-shell .ws-session-detail > .ws-page-header { margin-bottom: 0; }
+.ws-app-shell .ws-session-meta-card { padding: 16px; gap: 15px; border-radius: 5px; }
+.ws-app-shell .ws-session-meta-card__header { padding-bottom: 12px; }
+.ws-app-shell .ws-session-meta-card__id { font-size: 16px; }
+.ws-app-shell .ws-session-meta-grid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0; }
+.ws-app-shell .ws-meta-item { min-height: 67px; padding: 12px 14px; border-right: 1px solid var(--ws-border); border-bottom: 1px solid var(--ws-border); }
+.ws-app-shell .ws-meta-item:nth-child(3n) { border-right: 0; }
+.ws-app-shell .ws-meta-item:nth-last-child(-n+3) { border-bottom: 0; }
+.ws-app-shell .ws-meta-item__label { font-family: var(--ws-font-mono); font-size: 10px; letter-spacing: .04em; }
+.ws-app-shell .ws-meta-item__value { font-size: 12px; }
+.ws-app-shell .ws-meta-item:nth-child(-n+3) .ws-meta-item__value { font-size: 22px; font-weight: 650; }
+.ws-app-shell .ws-meta-item:nth-child(3) .ws-meta-item__value { color: var(--ws-danger); }
+.ws-app-shell .ws-investigation-signal { padding: 12px 14px; border-radius: 5px; }
+.ws-app-shell .ws-timeline-section__header { margin: 3px 0 9px; }
+.ws-app-shell .ws-timeline-section__title { font-size: 17px; }
+.ws-app-shell .ws-timeline-summary { padding: 10px 13px; margin-bottom: 12px; border-radius: 5px; }
+.ws-app-shell .ws-timeline-summary__label { font-size: 11px; }
+.ws-app-shell .ws-timeline-summary__value { font-size: 13px; }
+.ws-app-shell .ws-timeline-container { margin-top: 0; padding: 8px 14px 2px; border: 1px solid var(--ws-border); border-radius: 5px; background: #fff; }
+.ws-app-shell .ws-timeline-item { gap: 10px; }
+.ws-app-shell .ws-timeline-item__axis { width: 27px; }
+.ws-app-shell .ws-timeline-item__node { width: 26px; height: 26px; border-width: 1px; }
+.ws-app-shell .ws-timeline-item__node svg { width: 15px; height: 15px; }
+.ws-app-shell .ws-timeline-item__line { width: 2px; margin-top: 4px; margin-bottom: 4px; }
+.ws-app-shell .ws-timeline-item--neutral .ws-timeline-item__node { color: #3b73c4; border-color: #d7e6fa; background: #edf4ff; }
+.ws-app-shell .ws-timeline-item__body { padding-bottom: 17px; }
+.ws-app-shell .ws-timeline-item__card { padding: 11px 4px; border: 0; border-bottom: 1px solid #e8edf3; border-radius: 0; background: transparent; }
+.ws-app-shell .ws-timeline-item:last-child .ws-timeline-item__card { border-bottom: 0; }
+.ws-app-shell .ws-timeline-item__header { margin-bottom: 5px; }
+.ws-app-shell .ws-timeline-item__title-group { display: grid; grid-template-columns: 78px minmax(0,1fr); align-items: start; gap: 3px 12px; }
+.ws-app-shell .ws-timeline-item__time { grid-column: 1; grid-row: 1 / span 2; padding-top: 2px; font-size: 12px; }
+.ws-app-shell .ws-timeline-item__title { grid-column: 2; font-size: 14px; }
+.ws-app-shell .ws-timeline-item__title-group .ws-page-path { grid-column: 2; justify-self: start; }
+.ws-app-shell .ws-timeline-item__description { margin-left: 90px; font-size: 12px; line-height: 1.5; }
+.ws-app-shell .ws-timeline-item--target-highlight { padding: 4px 7px; margin: -4px -7px; border-radius: 4px; }
+.ws-app-shell .ws-timeline-item--target-highlight .ws-timeline-item__card { border: 0; border-bottom: 1px solid var(--ws-accent-border); box-shadow: none; }
+
+.ws-app-shell .ws-attention-card { min-height: 56px; padding: 11px 13px; border-radius: 5px; }
+.ws-app-shell .ws-activity-list { border-radius: 5px; }
+.ws-app-shell .ws-activity-item { padding: 12px 14px; }
+.ws-app-shell .ws-inv-card { padding: 15px 16px; gap: 11px; border-radius: 5px; }
+.ws-app-shell .ws-inv-card__title { font-size: 15px; }
+.ws-app-shell .ws-inv-card__description { font-size: 13px; line-height: 1.5; }
+.ws-app-shell .ws-settings-card { padding: 16px; border-radius: 5px; }
+
+@media (min-width: 1025px) {
+  .ws-app-shell .ws-sidebar,
+  .ws-app-shell .ws-sidebar--collapsed { width: 80px; }
+}
+@media (max-width: 1024px) {
+  .ws-app-shell .ws-sidebar,
+  .ws-app-shell .ws-sidebar--collapsed { width: 260px; }
+  .ws-app-shell__content { padding: 24px; }
+  .ws-app-shell .ws-session-detail,
+  .ws-app-shell .ws-error-detail-page,
+  .ws-app-shell .ws-perf-detail-page,
+  .ws-app-shell .ws-investigations-page { max-width: none; }
+}
+@media (max-width: 640px) {
+  .ws-app-shell .ws-header { height: 56px; gap: 8px; padding: 0 10px; }
+  .ws-app-shell .ws-header__workspace { min-height: 24px; font-size: 8px; }
+  .ws-app-shell__content { padding: 18px; }
+  .ws-app-shell .ws-page-header { margin-bottom: 18px; }
+  .ws-app-shell .ws-page-header__title { font-size: 21px; }
+  .ws-app-shell .ws-stat-card__value { font-size: 22px; }
+  .ws-app-shell .ws-session-meta-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .ws-app-shell .ws-meta-item { min-height: 61px; padding: 10px; border-right: 1px solid var(--ws-border); border-bottom: 1px solid var(--ws-border); }
+  .ws-app-shell .ws-meta-item:nth-child(3n) { border-right: 1px solid var(--ws-border); }
+  .ws-app-shell .ws-meta-item:nth-child(2n) { border-right: 0; }
+  .ws-app-shell .ws-meta-item:nth-last-child(-n+3) { border-bottom: 1px solid var(--ws-border); }
+  .ws-app-shell .ws-meta-item:nth-last-child(-n+2) { border-bottom: 0; }
+  .ws-app-shell .ws-meta-item:nth-child(-n+3) .ws-meta-item__value { font-size: 18px; }
+  .ws-app-shell .ws-timeline-container { padding: 6px 9px 2px; }
+  .ws-app-shell .ws-timeline-item__title-group { grid-template-columns: 64px minmax(0,1fr); gap: 3px 8px; }
+  .ws-app-shell .ws-timeline-item__description { margin-left: 72px; }
+  .ws-app-shell .ws-timeline-item__title { font-size: 12px; }
+  .ws-app-shell .ws-timeline-item__time { font-size: 10px; }
+}
+
+/* Keep the Overview's condensed table readable inside its narrower column. */
+.ws-app-shell .ws-session-table--compact {
+  width: 100%;
+  table-layout: fixed;
+}
+.ws-app-shell .ws-session-table--compact th,
+.ws-app-shell .ws-session-table--compact td { padding-right: 6px; padding-left: 6px; }
+.ws-app-shell .ws-session-table--compact th:nth-child(1) { width: 15%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(2) { width: 15%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(3) { width: 10%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(4) { width: 7%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(5) { width: 10%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(6) { width: 18%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(7) { width: 12%; }
+.ws-app-shell .ws-session-table--compact th:nth-child(8) { width: 13%; }
+.ws-app-shell .ws-session-table--compact td:nth-child(1),
+.ws-app-shell .ws-session-table--compact td:nth-child(2),
+.ws-app-shell .ws-session-table--compact td:nth-child(3),
+.ws-app-shell .ws-session-table--compact td:nth-child(4),
+.ws-app-shell .ws-session-table--compact td:nth-child(5),
+.ws-app-shell .ws-session-table--compact td:nth-child(7),
+.ws-app-shell .ws-session-table--compact td:nth-child(8) { white-space: nowrap; }
+.ws-app-shell .ws-session-table--compact .ws-error-tag { white-space: nowrap; }
+.ws-app-shell .ws-session-table--compact .ws-page-path {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
