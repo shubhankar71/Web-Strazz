@@ -1,87 +1,146 @@
-.ws-landing { min-height: 100%; color: #192638; background: #fff; font-family: var(--ws-font-ui); }
-.ws-landing a { text-decoration: none; }
-.ws-landing-nav { height: 68px; max-width: 1240px; padding: 0 32px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.ws-landing-brand { display: inline-flex; align-items: center; gap: 9px; color: #172638 !important; font-size: 15px; font-weight: 700; letter-spacing: -.02em; white-space: nowrap; }
-.ws-landing-brand > span { width: 29px; height: 29px; display: grid; place-items: center; color: #fff; background: #2454cf; border-radius: 6px; }
-.ws-landing-nav nav { display: flex; align-items: center; gap: 32px; }
-.ws-landing-nav nav a,.ws-landing-footer a:not(.ws-landing-brand) { color: #526175; font-size: 13px; font-weight: 500; }
-.ws-landing-nav nav a:hover,.ws-landing-footer a:hover { color: #2454cf; }
-.ws-landing-login { display: inline-flex; align-items: center; gap: 8px; color: #24364d; font-size: 13px; font-weight: 600; }
-.ws-landing-login:hover { color: #2454cf; }
-.ws-landing-hero { min-height: 470px; padding: 54px max(32px, calc((100vw - 1176px)/2)) 58px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(440px, 1.1fr); align-items: center; gap: 50px; overflow: hidden; color: white; background: linear-gradient(112deg,#101f3d 0%,#15366b 58%,#1f5c9a 100%); }
-.ws-landing-hero__copy { max-width: 500px; }
-.ws-eyebrow { margin: 0 0 18px; color: #a9c9ef; font-family: var(--ws-font-mono); font-size: 10px; font-weight: 600; letter-spacing: .1em; }
-.ws-eyebrow > span { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #55c4d5; vertical-align: 1px; }
-.ws-landing-hero h1 { margin: 0 0 18px; color: #fff; font-size: clamp(36px,4vw,52px); font-weight: 650; letter-spacing: -.045em; line-height: 1.08; }
-.ws-landing-hero__lead { max-width: 490px; color: #d2deed; font-size: 15px; line-height: 1.75; }
-.ws-landing-actions { display: flex; gap: 11px; margin-top: 26px; }
-.ws-button { min-height: 40px; padding: 0 15px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 5px; font-size: 12px; font-weight: 650; transition: background-color .15s ease,border-color .15s ease; }
-.ws-button--light { color: #142744 !important; background: #fff; }
-.ws-button--light:hover { background: #eaf3ff; }
-.ws-button--outline { color: white !important; border-color: #6f8baa; background: transparent; }
-.ws-button--outline:hover { background: #ffffff12; border-color: #bfd2e8; }
-.ws-landing-hero__note { margin-top: 16px; color: #aac0d8; font-size: 11px; }
-.ws-landing-hero__preview { min-width: 0; }
-.ws-preview { color: #28374b; border: 1px solid #aec1d6; border-radius: 7px; overflow: hidden; background: #f7f9fc; box-shadow: 0 15px 45px #07172e50; font-size: 10px; }
-.ws-preview__top { height: 39px; padding: 0 13px; display: flex; align-items: center; gap: 18px; border-bottom: 1px solid #dbe2eb; background: #fff; }
-.ws-preview__brand { display: flex; align-items: center; gap: 5px; color: #1b3e72; font-family: var(--ws-font-mono); font-size: 9px; font-weight: 700; letter-spacing: .04em; }
-.ws-preview__crumb { color: #758195; }.ws-preview__crumb b { color: #33445c; font-family: var(--ws-font-mono); font-weight: 500; }
-.ws-preview__sample { margin-left: auto; padding: 4px 6px; color: #4f6580; border: 1px solid #d6e0eb; border-radius: 3px; font-family: var(--ws-font-mono); font-size: 8px; letter-spacing: .04em; }
-.ws-preview__body { display: grid; grid-template-columns: 42px 1fr; min-height: 330px; }
-.ws-preview__rail { padding: 15px 0; display: flex; flex-direction: column; align-items: center; gap: 15px; border-right: 1px solid #dfe5ed; background: #f0f3f8; color: #8793a3; font-family: var(--ws-font-mono); font-size: 8px; }
-.ws-preview__rail span { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 4px; }.ws-preview__rail .is-active { color: #244c9c; background: #dce7fa; }
-.ws-preview__content { padding: 17px 18px 12px; }
-.ws-preview__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-.ws-preview__heading small,.ws-preview__stats small,.ws-preview__report small,.ws-preview__questions small { color: #8792a2; font-family: var(--ws-font-mono); font-size: 8px; letter-spacing: .05em; }
-.ws-preview__heading h2 { margin: 4px 0 3px; color: #23354e; font-size: 16px; font-weight: 650; }
-.ws-preview__heading p { color: #728096; font-size: 9px; }
-.ws-preview__status { margin-top: 8px; padding: 5px 7px; color: #a7443d; border: 1px solid #f0d1cd; border-radius: 3px; background: #fff6f5; font-size: 8px; white-space: nowrap; }
-.ws-preview__stats { margin: 15px 0; display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid #e0e5ec; border-radius: 4px; background: white; }
-.ws-preview__stats div { padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; border-right: 1px solid #e9edf2; }.ws-preview__stats div:last-child { border: 0; }
-.ws-preview__stats b { color: #26374d; font-family: var(--ws-font-mono); font-size: 12px; font-weight: 600; }.ws-preview__stats .is-error { color: #c34e45; }.ws-preview__stats .is-warn { color: #b27624; }
-.ws-preview__timeline { padding: 10px 11px 2px; border: 1px solid #e0e5ec; border-radius: 4px; background: white; }
-.ws-preview__timeline-head { padding-bottom: 8px; display: flex; justify-content: space-between; border-bottom: 1px solid #edf0f4; }.ws-preview__timeline-head b { font-size: 10px; }.ws-preview__timeline-head span { color: #8290a1; font-size: 8px; }
-.ws-preview__event { min-height: 39px; display: grid; grid-template-columns: 22px 41px 1fr; align-items: center; position: relative; gap: 6px; }.ws-preview__event:not(:last-child)::after { content: ""; width: 1px; height: 15px; position: absolute; left: 10px; bottom: -7px; background: #d8e1ec; }
-.ws-preview__node { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 50%; background: #eaf1fb; }.ws-preview__node.is-blue { color: #4374bf; }.ws-preview__node.is-warn { color: #a16b20; background: #fff4e3; }.ws-preview__node.is-error { color: #bd4d44; background: #fff0ee; }
-.ws-preview__event time { color: #8290a1; font-family: var(--ws-font-mono); font-size: 8px; }.ws-preview__event div { display: flex; flex-direction: column; gap: 2px; }.ws-preview__event b { color: #34445b; font-size: 9px; font-weight: 600; }.ws-preview__event small { color: #8290a1; font-size: 8px; }
-.ws-preview__foot { padding-top: 10px; display: flex; flex-wrap: wrap; gap: 13px; color: #738096; font-size: 8px; }.ws-preview__foot span { display: flex; align-items: center; gap: 4px; }.ws-preview__foot i { width: 6px; height: 6px; border-radius: 50%; background: #4c83c7; }.ws-preview__foot .is-request { background: #65a3bd; }.ws-preview__foot .is-slow { background: #d69a42; }.ws-preview__foot .is-failure { background: #ca6359; }
-.ws-section-wrap { width: min(1120px,calc(100% - 64px)); margin: 0 auto; }
-.ws-problem { padding-top: 70px; padding-bottom: 72px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 66px; align-items: center; }
-.ws-eyebrow--ink { margin-bottom: 12px; color: #527098; }
-.ws-problem__intro h2,.ws-section-heading h2 { max-width: 460px; margin: 0 0 12px; color: #1c2e45; font-size: 27px; font-weight: 650; letter-spacing: -.03em; line-height: 1.2; }
-.ws-problem__intro > p:last-child,.ws-section-heading > p { color: #637187; font-size: 13px; line-height: 1.7; }
-.ws-problem__case { padding: 18px; display: grid; grid-template-columns: .75fr 1.2fr; gap: 18px 24px; border: 1px solid #e1e6ed; border-radius: 5px; background: #fbfcfe; }
-.ws-problem__report p { margin-top: 12px; color: #253a55; font-size: 17px; font-weight: 600; }
-.ws-problem__questions ul { padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 7px 12px; list-style: none; color: #56657a; font-size: 11px; }
-.ws-problem__questions li::before { content: "?"; margin-right: 6px; color: #3672b9; font-family: var(--ws-font-mono); }
-.ws-problem__answer { grid-column: 1/-1; padding-top: 13px; display: flex; align-items: center; gap: 10px; border-top: 1px solid #e7ebf0; color: #56657a; font-size: 11px; line-height: 1.6; }.ws-problem__answer > span { width: 27px; height: 27px; display: grid; place-items: center; color: #2e65a8; background: #eaf1fb; border-radius: 4px; flex: 0 0 auto; }
-.ws-workflow { padding: 56px 0 60px; background: #f4f7fb; border-top: 1px solid #e9edf2; border-bottom: 1px solid #e9edf2; }
-.ws-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; }.ws-section-heading h2 { margin-bottom: 0; }.ws-section-heading > p { max-width: 310px; margin-bottom: 2px; }
-.ws-steps { padding: 0; margin: 29px 0 0; display: grid; grid-template-columns: repeat(5,1fr); list-style: none; border: 1px solid #dce4ee; border-radius: 5px; background: white; }
-.ws-steps li { min-height: 89px; padding: 15px 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; border-right: 1px solid #e7ebf0; color: #34465d; font-size: 11px; font-weight: 600; }.ws-steps li:last-child { border-right: 0; }.ws-steps__number { color: #527aa9; font-family: var(--ws-font-mono); font-size: 10px; }.ws-steps__arrow { position: absolute; top: 35px; right: -9px; z-index: 1; padding: 1px; color: #6682a5; background: white; }
-.ws-features { padding-top: 66px; padding-bottom: 72px; }.ws-feature-grid { margin-top: 26px; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid #e4e9ef; border-left: 1px solid #e4e9ef; }.ws-feature { min-height: 145px; padding: 18px 20px; border-right: 1px solid #e4e9ef; border-bottom: 1px solid #e4e9ef; }.ws-feature__icon { width: 29px; height: 29px; margin-bottom: 12px; display: grid; place-items: center; color: #2f66ad; border: 1px solid #dce6f2; border-radius: 4px; background: #f7faff; }.ws-feature h3 { margin: 0 0 6px; color: #25374e; font-size: 13px; font-weight: 650; }.ws-feature p { max-width: 290px; color: #657389; font-size: 11px; line-height: 1.6; }
-.ws-final-cta { padding: 47px 32px 50px; color: #fff; text-align: center; background: linear-gradient(110deg,#142746,#1c477b); }.ws-final-cta .ws-eyebrow { margin-bottom: 11px; color: #9ebcdf; }.ws-final-cta h2 { margin: 0 0 11px; color: #fff; font-size: 28px; letter-spacing: -.03em; line-height: 1.2; }.ws-final-cta > div > p:not(.ws-eyebrow) { margin: 0 auto 20px; color: #d0dced; font-size: 12px; line-height: 1.6; }
-.ws-landing-footer { min-height: 66px; width: min(1120px,calc(100% - 64px)); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }.ws-landing-footer .ws-landing-brand { font-size: 12px; }.ws-landing-footer .ws-landing-brand > span { width: 23px; height: 23px; }.ws-landing-footer p { color: #778397; font-size: 10px; }.ws-landing-footer > div { display: flex; gap: 17px; }
-@media (max-width: 900px) { .ws-landing-hero { grid-template-columns: 1fr; gap: 34px; padding: 50px max(32px,calc((100vw - 680px)/2)); }.ws-landing-hero__copy { max-width: 620px; }.ws-landing-hero__preview { width: min(100%,680px); }.ws-problem { grid-template-columns: 1fr; gap: 26px; }.ws-steps { grid-template-columns: repeat(5,minmax(100px,1fr)); }.ws-steps li { padding: 13px 11px; }.ws-feature { padding: 16px; } }
-@media (max-width: 620px) { .ws-landing-nav { height: 60px; padding: 0 18px; gap: 12px; }.ws-landing-nav nav { gap: 14px; }.ws-landing-nav nav a { font-size: 11px; }.ws-landing-nav nav a:first-child { display: none; }.ws-landing-brand { font-size: 13px; }.ws-landing-brand > span { width: 26px; height: 26px; }.ws-landing-login { gap: 4px; font-size: 12px; }.ws-landing-hero { min-height: unset; padding: 43px 19px 38px; gap: 29px; }.ws-landing-hero h1 { font-size: clamp(34px,10vw,45px); }.ws-landing-hero__lead { font-size: 13px; }.ws-landing-actions { flex-wrap: wrap; }.ws-preview__top { padding: 0 9px; gap: 9px; }.ws-preview__crumb { font-size: 8px; }.ws-preview__body { grid-template-columns: 30px 1fr; }.ws-preview__content { padding: 13px 9px 10px; }.ws-preview__stats div { padding: 7px 5px; }.ws-preview__heading h2 { font-size: 14px; }.ws-preview__status { font-size: 7px; }.ws-preview__event { grid-template-columns: 20px 34px 1fr; gap: 4px; }.ws-preview__event b { font-size: 8px; }.ws-preview__foot { gap: 8px; }.ws-section-wrap,.ws-landing-footer { width: calc(100% - 38px); }.ws-problem { padding-top: 47px; padding-bottom: 48px; gap: 20px; }.ws-problem__intro h2,.ws-section-heading h2 { font-size: 24px; }.ws-problem__case { padding: 14px; grid-template-columns: 1fr; gap: 16px; }.ws-problem__report p { margin-top: 6px; }.ws-problem__questions ul { grid-template-columns: 1fr 1fr; font-size: 10px; }.ws-problem__answer { grid-column: auto; }.ws-workflow { padding: 45px 0; }.ws-section-heading { align-items: flex-start; flex-direction: column; gap: 10px; }.ws-section-heading > p { font-size: 12px; }.ws-steps { grid-template-columns: 1fr; margin-top: 19px; }.ws-steps li { min-height: unset; padding: 11px 13px; flex-direction: row; align-items: center; justify-content: flex-start; gap: 12px; border-right: 0; border-bottom: 1px solid #e7ebf0; }.ws-steps li:last-child { border-bottom: 0; }.ws-steps__number { width: 22px; }.ws-steps__arrow { display: none; }.ws-features { padding-top: 47px; padding-bottom: 50px; }.ws-feature-grid { grid-template-columns: 1fr; margin-top: 20px; }.ws-feature { min-height: unset; padding: 15px; }.ws-feature__icon { margin-bottom: 8px; }.ws-final-cta { padding: 40px 19px; }.ws-final-cta h2 { font-size: 25px; }.ws-landing-footer { padding: 16px 0; align-items: flex-start; flex-wrap: wrap; }.ws-landing-footer p { order: 3; width: 100%; }.ws-landing-footer > div { gap: 12px; } }
-@media (prefers-reduced-motion: reduce) { html:has(.ws-landing) { scroll-behavior: auto; } .ws-button { transition: none; } }
-html:has(.ws-landing) { scroll-behavior: smooth; }
+import { Link } from "react-router-dom";
+import { Activity, ArrowDown, ArrowRight, Bug, Clock3, Gauge, MousePointer2, Send, Zap } from "lucide-react";
+import "./Landing.css";
 
-/* Keep the public section links and Login available throughout the landing page. */
-.ws-landing-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #fff;
-  border-bottom: 1px solid #e8edf2;
+const features = [
+  { icon: Activity, title: "Session investigation", text: "Inspect an individual session and follow the sequence of recorded activity." },
+  { icon: Clock3, title: "Event timeline", text: "Read navigation, user actions, requests, errors, and performance events in order." },
+  { icon: Bug, title: "Error investigation", text: "Review recurring errors and the sessions associated with them." },
+  { icon: Gauge, title: "Performance signals", text: "Find slow requests and inspect the surrounding session events." },
+  { icon: ArrowRight, title: "Cross-linked records", text: "Move between sessions, errors, performance signals, and related timeline events." },
+  { icon: Activity, title: "Investigation workflow", text: "Create and update an investigation around a problem you are tracing." },
+];
+
+const steps = [
+  "Find the affected session",
+  "Inspect the activity",
+  "Trace the timeline",
+  "Identify the error or slow request",
+  "Create an investigation",
+];
+
+function ProductPreview() {
+  return (
+    <div className="ws-preview" aria-label="Sample session detail and event timeline from the demo data">
+      <div className="ws-preview__top">
+        <span className="ws-preview__brand"><Zap size={13} /> WEB STARZZ</span>
+        <span className="ws-preview__crumb">Sessions&nbsp; / &nbsp;<b>sess_9f83a12b</b></span>
+        <span className="ws-preview__sample">DEMO SAMPLE</span>
+      </div>
+      <div className="ws-preview__body">
+        <aside className="ws-preview__rail" aria-hidden="true">
+          <span>OV</span><span className="is-active">SE</span><span>ER</span><span>PE</span><span>IN</span>
+        </aside>
+        <div className="ws-preview__content">
+          <div className="ws-preview__heading">
+            <div>
+              <small>SESSION DETAIL</small>
+              <h2>Checkout session</h2>
+              <p>Session <code>sess_9f83a12b</code> · /checkout/payment</p>
+            </div>
+            <span className="ws-preview__status">Error</span>
+          </div>
+          <div className="ws-preview__timeline">
+            <div className="ws-preview__timeline-head"><b>Chronological event timeline</b><span>From demo records</span></div>
+            <div className="ws-preview__event">
+              <span className="ws-preview__node is-blue"><MousePointer2 size={12} /></span><time>+01:18</time>
+              <div><b>Click: “Pay &amp; Subscribe”</b><small>/checkout/payment · User action</small></div>
+            </div>
+            <div className="ws-preview__event">
+              <span className="ws-preview__node is-blue"><Send size={12} /></span><time>+01:19</time>
+              <div><b>POST /api/v2/payment/charge</b><small>Request · Related performance signal</small></div>
+            </div>
+            <div className="ws-preview__event">
+              <span className="ws-preview__node is-warn"><Clock3 size={12} /></span><time>+01:24</time>
+              <div><b>Slow API Response: 5.21s</b><small>Latency threshold: 2.0s</small></div>
+            </div>
+            <div className="ws-preview__event">
+              <span className="ws-preview__node is-error"><Bug size={12} /></span><time>+01:25</time>
+              <div><b>Console Error: Payment Flow Terminated</b><small>Related to the same checkout session</small></div>
+            </div>
+          </div>
+          <div className="ws-preview__foot"><span><i /> User action</span><span><i className="is-request" /> Request</span><span><i className="is-slow" /> Performance</span><span><i className="is-failure" /> Error</span></div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-.ws-landing main section[id] {
-  scroll-margin-top: 76px;
-}
+export default function Landing() {
+  return (
+    <div className="ws-landing">
+      <header className="ws-landing-nav">
+        <Link className="ws-landing-brand" to="/" aria-label="Web Starzz home">
+          <span><Zap size={17} fill="currentColor" /></span>Web Starzz
+        </Link>
+        <nav aria-label="Public navigation">
+          <a href="#product">Product</a><a href="#workflow">How it works</a><a href="#features">Features</a>
+        </nav>
+        <Link className="ws-landing-login" to="/login">Login <ArrowRight size={15} /></Link>
+      </header>
 
-@media (max-width: 620px) {
-  .ws-landing main section[id] {
-    scroll-margin-top: 68px;
-  }
+      <main>
+        <section className="ws-landing-hero" id="product">
+          <div className="ws-landing-hero__copy">
+            <p className="ws-eyebrow"><span /> SESSION INVESTIGATION FOR DEVELOPERS</p>
+            <h1>Investigate what went wrong in a web session.</h1>
+            <p className="ws-landing-hero__lead">Trace user activity, API requests, JavaScript errors, and performance issues in one chronological view. Follow related records to see how the problem unfolded.</p>
+            <div className="ws-landing-actions">
+              <a className="ws-button ws-button--light" href="#workflow">Explore the workflow <ArrowDown size={15} /></a>
+              <Link className="ws-button ws-button--outline" to="/login">Login <ArrowRight size={15} /></Link>
+            </div>
+            <p className="ws-landing-hero__note">Product preview uses a labeled sample from the bundled demo data.</p>
+          </div>
+          <div className="ws-landing-hero__preview"><ProductPreview /></div>
+        </section>
+
+        <section className="ws-problem ws-section-wrap" aria-labelledby="problem-title">
+          <div className="ws-problem__intro">
+            <p className="ws-eyebrow ws-eyebrow--ink">THE INVESTIGATION GAP</p>
+            <h2 id="problem-title">An error message rarely tells the whole story.</h2>
+            <p>A report like “checkout is slow” leaves the important questions unanswered.</p>
+          </div>
+          <div className="ws-problem__case">
+            <div className="ws-problem__report"><small>USER REPORT</small><p>“Checkout is slow.”</p></div>
+            <div className="ws-problem__questions">
+              <small>WHAT DO YOU NEED TO KNOW?</small>
+              <ul><li>What did the user do?</li><li>Which page were they on?</li><li>Which request was slow?</li><li>Did an error happen afterward?</li></ul>
+            </div>
+            <div className="ws-problem__answer"><span><Activity size={17} /></span><p><b>Web Starzz connects the evidence.</b> Follow the session timeline to see the activity, request, and related error in context.</p></div>
+          </div>
+        </section>
+
+        <section className="ws-workflow" id="workflow">
+          <div className="ws-section-wrap">
+            <div className="ws-section-heading">
+              <div><p className="ws-eyebrow ws-eyebrow--ink">HOW IT WORKS</p><h2>Follow the evidence through a session.</h2></div>
+              <p>Move from a reported issue to the records that help explain it.</p>
+            </div>
+            <ol className="ws-steps">
+              {steps.map((step, i) => <li key={step}><span className="ws-steps__number">0{i + 1}</span><span>{step}</span>{i < steps.length - 1 && <ArrowRight className="ws-steps__arrow" size={16} aria-hidden="true" />}</li>)}
+            </ol>
+          </div>
+        </section>
+
+        <section className="ws-features ws-section-wrap" id="features">
+          <div className="ws-section-heading">
+            <div><p className="ws-eyebrow ws-eyebrow--ink">FEATURES</p><h2>Session context, connected.</h2></div>
+            <p>Tools for examining recorded activity and keeping related findings together.</p>
+          </div>
+          <div className="ws-feature-grid">
+            {features.map(({ icon: Icon, title, text }) => <article className="ws-feature" key={title}><span className="ws-feature__icon"><Icon size={17} /></span><h3>{title}</h3><p>{text}</p></article>)}
+          </div>
+        </section>
+
+        <section className="ws-final-cta">
+          <div><p className="ws-eyebrow">WEB STARZZ</p><h2>Ready to investigate a session?</h2><p>Trace application issues from user activity to the related technical evidence.</p><Link className="ws-button ws-button--light" to="/login">Login to Web Starzz <ArrowRight size={15} /></Link></div>
+        </section>
+      </main>
+      <footer className="ws-landing-footer">
+        <Link className="ws-landing-brand" to="/"><span><Zap size={15} fill="currentColor" /></span>Web Starzz</Link>
+        <p>Demo records are illustrative and do not represent live customer telemetry.</p>
+        <div><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link><Link to="/login">Login</Link></div>
+      </footer>
+    </div>
+  );
 }
