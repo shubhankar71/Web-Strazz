@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, Zap, ChevronRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Menu } from "lucide-react";
 import Button from "../ui/Button";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { getConfiguredDataSource } from "../../services/parseClient.js";
@@ -9,13 +9,8 @@ import "./Header.css";
 export default function Header({ onOpenMobileNav, mobileMenuButtonRef, mobileNavOpen }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const { pathname } = useLocation();
   const [logoutError, setLogoutError] = useState("");
   const dataSource = getConfiguredDataSource();
-  const segments = pathname.split("/").filter(Boolean);
-  const sectionLabels = { sessions: "Sessions", errors: "Errors", performance: "Performance", investigations: "Investigations", settings: "Settings" };
-  const sectionLabel = sectionLabels[segments[0]] || "Overview";
-  const detailId = segments.length > 1 && ["sessions", "errors", "performance"].includes(segments[0]) ? segments[1] : "";
 
   async function handleLogout() {
     setLogoutError("");
@@ -41,19 +36,11 @@ export default function Header({ onOpenMobileNav, mobileMenuButtonRef, mobileNav
         <Menu size={18} />
       </button>
 
-      <Link className="ws-header__brand" to="/" aria-label="Web Starzz Overview">
-        <span className="ws-header__brand-mark" aria-hidden="true"><Zap size={14} fill="currentColor" /></span>
-        <span>WEB STARZZ</span>
-      </Link>
-      <span className="ws-header__divider" aria-hidden="true" />
-      <nav className="ws-header__breadcrumbs" aria-label="Breadcrumb">
-        {detailId ? <><Link to={`/${segments[0]}`}>{sectionLabel}</Link><ChevronRight size={13} aria-hidden="true" /><span className="ws-header__breadcrumb-current ws-mono">{detailId}</span></> : <span className="ws-header__breadcrumb-current">{sectionLabel}</span>}
-      </nav>
       <div className="ws-header__spacer" />
 
       <div className={`ws-header__workspace${dataSource === "demo" ? " ws-header__workspace--demo" : ""}`}>
         <span className="ws-header__workspace-dot" aria-hidden="true" />
-        {dataSource === "demo" ? "SAMPLE DATA" : dataSource === "parse" ? "PARSE MODE" : "CONFIGURATION ERROR"}
+        {dataSource === "demo" ? "Demo Environment" : dataSource === "parse" ? "Parse Mode" : "Invalid data source"}
       </div>
 
       <details className="ws-header__account">
