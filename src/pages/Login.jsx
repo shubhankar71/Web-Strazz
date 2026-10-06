@@ -4,7 +4,7 @@ import { Zap } from "lucide-react";
 import Button from "../components/ui/Button";
 import LoadingState from "../components/ui/LoadingState";
 import { useAuth } from "../context/AuthContext.jsx";
-import { DEMO_CREDENTIALS, getAuthMode } from "../services/authService.js";
+import { getAuthMode } from "../services/authService.js";
 import "./Login.css";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -65,9 +65,8 @@ export default function Login() {
 
         {demoMode && (
           <div className="ws-login__demo-note" role="note">
-            <strong>Demo Authentication</strong>
-            <span>Local demonstration only; this is not secure production authentication.</span>
-            <code>{DEMO_CREDENTIALS.email} / {DEMO_CREDENTIALS.password}</code>
+            <strong>Demo environment</strong>
+            <span>Sign-in uses local demonstration authentication.</span>
           </div>
         )}
 
